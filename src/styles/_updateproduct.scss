@@ -1,0 +1,28 @@
+$grey: #eef4f7;
+
+.update-product-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    margin-top: 10px;
+  }
+  .product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid $grey;
+    padding: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  .icon-container {
+    display: flex;
+    i {
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+  }
+}

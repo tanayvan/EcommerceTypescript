@@ -1,0 +1,36 @@
+$grey: #eef4f7;
+.cart-card {
+  width: 100%;
+  border: 1px solid $grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  img {
+    padding: 1rem;
+  }
+}
+.product-image {
+  display: flex;
+  width: 20%;
+  align-items: center;
+}
+.product-stats {
+  color: #2e2e2e;
+}
+.product-name {
+  font-size: 1rem;
+}
+.product-price {
+  font-size: larger;
+  font-weight: 800;
+  font-size: 1rem;
+}
+@media screen and (max-width: 750px) {
+  .product-image {
+    display: flex;
+    width: 70%;
+    align-items: center;
+  }
+}

@@ -1,0 +1,31 @@
+$grey: #eef4f7;
+
+.category-container {
+  width: 70%;
+  h1 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  button {
+    text-align: center;
+  }
+}
+
+.category-list-container {
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0;
+      border: 3px solid $grey;
+      padding: 10px;
+    }
+    i {
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+$blue: #6fd1ff;
+$grey: #eef4f7;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Avant Garde Gothic";
+  src: url("./assests/ITC\ Avant\ Garde\ Gothic\ Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "NeutraText-Book";
+  src: url("./assests/NeutraText-Book.otf") format("opentype");
+}
+body {
+  font-family: "Avant Garde Gothic", "Commissioner", sans-serif;
+  background: linear-gradient($blue, rgba(92, 195, 226, 0.2), $blue) fixed;
+}
+
+input,
+select {
+  margin: 0.5rem 0;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgb(223, 227, 250);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 5px;
+}
+option {
+  background-color: #eef4f7;
+  padding: 15px;
+  margin: 2rem;
+}
+option:hover {
+  background-color: $blue;
+  color: white;
+}
+input:focus,
+select:focus {
+  border: 2px solid $blue;
+}
+.error {
+  border: 2px solid red;
+}
+
+button {
+  margin: 1rem 0;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: 1px solid $blue;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 5px;
+}
+button:hover {
+  background: $blue;
+  color: white;
+}
+button:disabled {
+  background: $grey;
+  border: 1px solid $grey;
+  color: black;
+  opacity: 0.5;
+}
+@import "./styles/navbar";
+@import "./styles/login";
+@import "./styles/admin";
+@import "./styles/addcategory";
+@import "./styles/addproduct";
+@import "./styles/backdrop";
+@import "./styles/form";
+@import "./styles/updateproduct";
+@import "./styles/home";
+@import "./styles/product";
+@import "./styles/productcardhome";
+@import "./styles/tshirtcard";
+@import "./styles/tshirtdisplay";
+@import "./styles/cart";
+@import "./styles/cartcard";

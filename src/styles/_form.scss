@@ -1,0 +1,31 @@
+.product-form-container {
+  height: 100vh;
+  width: 50%;
+  background-color: white;
+  border-radius: 25px;
+  transform: translateX(-100%);
+  transition: all ease-in-out 300ms;
+  z-index: 25;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.product-form-container-active {
+  transform: translateX(0%);
+  transition: all ease-out 300ms;
+}

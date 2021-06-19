@@ -1,0 +1,162 @@
+$blue: #6fd1ff;
+$black: #292929;
+$pink: #feb8b8;
+@font-face {
+  font-family: "Avant Garde Gothic";
+  src: url("../assests/ITC\ Avant\ Garde\ Gothic\ Bold.otf") format("opentype");
+}
+
+.navbar {
+  //   background: $blue;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  // background: $blue;
+  font-family: "Avant Garde Gothic";
+  position: relative;
+  z-index: 10;
+  .brand {
+    text-align: center;
+    font-family: "Fascinate", cursive;
+    color: white;
+    font-size: 1.7rem;
+    height: 70%;
+    padding: 10px 5px;
+    margin-left: 10px;
+  }
+}
+.hamburger {
+  display: none;
+}
+.menu-collection,
+.user-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a,
+button {
+  text-decoration: none;
+  transition: all ease 0.5s;
+}
+.nav-links a,
+.btn {
+  color: white;
+  text-decoration: none;
+  margin: 0px 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.btn {
+  background: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+.nav-links a:hover,
+button:hover {
+  color: $black;
+}
+.mobile-menu-container {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+  }
+  .line {
+    margin: 3px 0;
+    transition: all ease-in-out 100ms;
+    transform: rotate(0deg);
+  }
+  .line:first-child {
+    height: 2.5px;
+    width: 25px;
+    background-color: white;
+  }
+  .line-1-active {
+    position: absolute;
+    transform: rotate(45deg);
+    transition: all ease-in-out 100ms;
+  }
+  .line-2-active {
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: all ease-in-out 100ms;
+  }
+  .line-3-active {
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 25px !important;
+    transition: all ease-in-out 100ms;
+  }
+  .line:nth-child(2) {
+    height: 2.5px;
+    width: 25px;
+    background-color: white;
+  }
+  .line:nth-child(3) {
+    height: 2.5px;
+    width: 15px;
+    background-color: white;
+    text-align: right;
+  }
+  .menu-collection {
+    display: none;
+  }
+  .user-login {
+    display: none;
+  }
+  .mobile-menu-container {
+    // display: none !important;
+    position: absolute;
+    background-color: #6fd1ff;
+    width: 0%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 200ms;
+    opacity: 0;
+    z-index: -100;
+    ul {
+      list-style: none;
+      width: 100%;
+    }
+    li {
+      width: 100%;
+    }
+    li a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: white;
+      display: block;
+      width: 100%;
+      margin: 2rem 0;
+      text-align: center;
+      transform: translateY(50px);
+      transition: all ease-in 200ms;
+      transition-delay: 200ms;
+    }
+  }
+}
+
+.mobile-menu-container-active {
+  background: linear-gradient($blue, $pink) fixed;
+  opacity: 1;
+  z-index: 2;
+  width: 100%;
+  li a {
+    transform: translateY(0px);
+  }
+}

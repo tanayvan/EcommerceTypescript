@@ -1,0 +1,74 @@
+.card-container-wrap {
+  width: 300px;
+  position: relative;
+  background-color: transparent;
+  height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-image {
+  height: 100%;
+}
+.card-image img {
+  width: 100%;
+  filter: brightness(0.9);
+  height: 100%;
+  object-fit: cover;
+  transition: all linear 300ms;
+}
+
+.card-header {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  transition: all linear 300ms;
+
+  text-shadow: 1px 0px 1px rgb(150, 150, 150), 0px 1px 1px rgb(150, 150, 150),
+    2px 1px 1px #ccc, 1px 2px 1px rgb(150, 150, 150), 3px 2px 1px #ccc,
+    2px 3px 1px rgb(150, 150, 150), 4px 3px 1px #ccc;
+}
+.card-container-wrap:hover .card-image img {
+  transform: scale(1.2);
+  //   transition: all ease-in 200ms;
+}
+
+.card-container-wrap:hover .card-header {
+  transform: scale(0.8);
+  //   transition: all ease-in 200ms;
+}
+
+.next-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+
+  i {
+    color: white;
+    font-size: 2.5rem;
+    overflow: hidden;
+    width: 0%;
+    transition: all ease-in 200ms;
+    transition-delay: 100ms;
+  }
+}
+
+.card-container-wrap:hover .next-icon i {
+  width: 100%;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 750px) {
+  .card-container-wrap {
+    margin: 1rem 0rem;
+  }
+  .card-image {
+    width: 90%;
+  }
+}
